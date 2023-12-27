@@ -55,7 +55,7 @@ const Page1 = () => {
     <p>on appstore and & google playstore</p>
     </div>
     <div data-aos="fade-up"  className='lower-part'>
-    <img style={{height:70,width:240}} src='/world-communication-awards-for-best-digital-experience.png'/>
+    <img style={{height:70,width:240,backgroundColor:'white',borderRadius:'1rem'}} src='/world-communication-awards-for-best-digital-experience.png'/>
     <h1>ABC 123</h1>
     <p>We are the best web development company in the world</p>
     <span>view case study-<button>Skip</button></span>

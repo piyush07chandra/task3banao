@@ -58,7 +58,7 @@ const Page3 = () => {
 <div className='first3-div'>
 <div data-aos="fade-left"  data-aos-duration="2000" className='upper-part'>
   <p>Powered by Advance</p>
-  <img src='/nasa-mobile-app.png'/>
+  <img style={{marginLeft:'-30px'}} src='/nasa-mobile-app.png'/>
 <p>Algorithms</p>
 </div>
 

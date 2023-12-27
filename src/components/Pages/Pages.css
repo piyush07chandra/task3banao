@@ -107,6 +107,7 @@
     width: 55%;
     height: 675px;
     background-color: rgb(0, 180, 90);
+    z-index: 15;
 }
 
 

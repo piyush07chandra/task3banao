@@ -1,28 +1,21 @@
-.progress-bar {
-  display: flex;
-  justify-content: space-between;
-  width: 20%;
-  margin: 20px auto;
+.svg-path{
+  height: 300px;
+  width: 318px;
+  margin-top: 32px;
+  margin-left: 216px;
   position: fixed;
+  z-index: 10;
+  opacity: 0.8;
 }
-
-.progress-bar-line {
-  height: 2px;
-  background-color: rgb(57, 149, 255);
-  position: absolute;
-  top: 50%;
-  left: 0;
+.svg-img{
+  height: 357px;
+  width: 380px;
+  margin-left: 187px;
+  position: fixed;
+  mix-blend-mode:overlay;
+  opacity: 0.5;
+  z-index: 11;
 }
-
-.progress-bar-point {
-  width: 20px;
-  height: 20px;
-  background-color: lightgray;
-  border-radius: 50%;
-  cursor: pointer;
-  
-}
-
-.progress-bar-point.active {
-  background-color: rgb(57, 149, 255);
+.p-bar{
+  margin-left: 30px; 
 }

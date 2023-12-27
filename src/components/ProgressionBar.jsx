@@ -1,23 +1,20 @@
-import { useState,useEffect,useRef } from "react";
+
 import './RoundProgressBar.css'
 
+import { useEffect, useState } from 'react';
+import { Circle } from 'rc-progress';
+
+
+
 const ProgressionBar = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [lineWidth, setLineWidth] = useState(0);
-  const progressBarRef = useRef();
+  const [scrollPercentage, setScrollPercentage] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const totalPages = 7;
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const totalHeight = document.body.scrollHeight;
-
-      const scrolledPercentage = (scrollPosition / (totalHeight - windowHeight)) * 100;
-      const currentPage = Math.ceil((scrolledPercentage / 100) * totalPages);
-
-      setCurrentPage(currentPage);
-      setLineWidth(scrolledPercentage);
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollTop = window.scrollY;
+      const percentage = (scrollTop / scrollHeight) * 100;
+      setScrollPercentage(percentage);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -26,28 +23,25 @@ const ProgressionBar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-    // Scroll to the corresponding section/page using the ref
-    
-  };
-
+ 
+ 
   return (
     <>
-        <div className="progress-bar" ref={progressBarRef}>
-      <div
-        className="progress-bar-line"
-        style={{ width: `${lineWidth}%` }}
+    <div className='p-bar'>
+  <div className='svg-path'>
+      <Circle
+        percent={scrollPercentage}
+        gapDegree={100}
+        gapPosition='left'
+        strokeColor='blue'
+        trailColor='gray'
       />
-      {Array.from({ length: 7 }, (_, index) => (
-        <div
-          key={index}
-          className={`progress-bar-point ${index + 1 <= currentPage ? 'active' : ''}`}
-          onClick={() => handlePageChange(index + 1)}
-        />
-      ))}
     </div>
+    <div className='svg-img'>
+    <img  src='/svg with paths.svg'/>
+    </div>
+    </div>
+    
     </>
   )
 }

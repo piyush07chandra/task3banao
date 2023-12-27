@@ -17,7 +17,7 @@ const Page2 = () => {
     const tl=gsap.timeline({
       scrollTrigger:{
         trigger:el,
-        start: "970",
+        start: "870",
         end: "1350",
         scrub:true,
         markers:false
@@ -33,7 +33,7 @@ const Page2 = () => {
     const tl2=gsap.timeline({
       scrollTrigger:{
         trigger:el2,
-        start: "970",
+        start: "870",
         end: "1350",
         scrub:true,
         markers:false
