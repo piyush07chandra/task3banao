@@ -8,7 +8,7 @@ import Page5 from './components/Pages/Page5'
 import Page6 from './components/Pages/Page6'
 import Page7 from './components/Pages/Page7'
 import Crousel from './components/Crousel'
-import ProgressionBar from './components/ProgressionBar';
+
 
 
 
@@ -19,7 +19,6 @@ function App() {
     <>   
      
       <Crousel/>
-      <ProgressionBar/>
       <Page1/>
       <Page2/>
       <Page3/>
